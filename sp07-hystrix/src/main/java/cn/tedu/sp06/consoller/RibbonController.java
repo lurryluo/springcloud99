@@ -1,20 +1,15 @@
 package cn.tedu.sp06.consoller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import cn.tedu.sp01.pojo.Item;
 import cn.tedu.sp01.pojo.Order;
 import cn.tedu.sp01.pojo.User;
 import cn.tedu.web.util.JsonResult;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 @RestController
 public class RibbonController {

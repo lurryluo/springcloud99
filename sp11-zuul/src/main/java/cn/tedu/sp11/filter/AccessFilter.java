@@ -1,17 +1,18 @@
 package cn.tedu.sp11.filter;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
-import org.springframework.stereotype.Component;
-
+import cn.tedu.web.util.JsonResult;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import cn.tedu.web.util.JsonResult;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Component
 public class AccessFilter extends ZuulFilter{
+
+
 	@Override
 	public boolean shouldFilter() {
 	    //对指定的serviceid过滤，如果要过滤所有服务，直接返回 true

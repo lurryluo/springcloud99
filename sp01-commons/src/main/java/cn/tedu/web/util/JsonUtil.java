@@ -1,21 +1,5 @@
 package cn.tedu.web.util;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Writer;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.lang3.StringUtils;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
@@ -30,11 +14,20 @@ import com.fasterxml.jackson.datatype.guava.GuavaModule;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
 
-import lombok.extern.slf4j.Slf4j;
+import java.io.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
-@Slf4j
 public class JsonUtil {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(JsonUtil.class);
     private static ObjectMapper mapper;
     private static JsonInclude.Include DEFAULT_PROPERTY_INCLUSION = JsonInclude.Include.NON_DEFAULT;
     private static boolean IS_ENABLE_INDENT_OUTPUT = false;
@@ -46,7 +39,7 @@ public class JsonUtil {
             configIndentOutput();
             configCommon();
         } catch (Exception e) {
-            log.error("jackson config error", e);
+           // log.error("jackson config error", e);
         }
     }
 

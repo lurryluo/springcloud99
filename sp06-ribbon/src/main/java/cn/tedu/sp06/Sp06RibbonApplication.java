@@ -17,8 +17,8 @@ public class Sp06RibbonApplication {
 	@Bean
 	public RestTemplate getRestTemplate() {
 		SimpleClientHttpRequestFactory f = new SimpleClientHttpRequestFactory();
-		f.setConnectTimeout(1000);
-		f.setReadTimeout(1000);
+		f.setConnectTimeout(1000);//超时1秒
+		f.setReadTimeout(1000);//超时1秒
 		return new RestTemplate(f);
 		
 		//return new RestTemplate();

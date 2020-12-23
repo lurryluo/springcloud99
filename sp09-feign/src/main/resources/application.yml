@@ -11,20 +11,25 @@ eureka:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
       
 ribbon:
+  MaxAutoRetries: 1
   ConnectTimeout: 1000
   ReadTimeout: 1000
   
 item-service:
   ribbon:
-    MaxAutoRetries: 1
-    MaxAutoRetriesNextServer: 2
+
+    MaxAutoRetriesNextServer: 0
     ConnectTimeout: 1000
     ReadTimeout: 500
     
+
+
+#启用 hystrix
 feign:
   hystrix:
     enabled: true
-    
+
+
 hystrix:
   command:
     default:

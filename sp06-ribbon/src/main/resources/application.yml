@@ -11,6 +11,18 @@ eureka:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
       
 ribbon:
-  MaxAutoRetriesNextServer: 2
-  MaxAutoRetries: 1
+  #更换服务器次数
+  MaxAutoRetriesNextServer: 1
+
+  #单台服务器重试次数
+  MaxAutoRetries: 0
+
   OkToRetryOnAllOperations: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500

@@ -5,19 +5,19 @@
 #server:
 #  port: 3001
 #  
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-#
-#zuul:
-#  retryable: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+zuul:
+  retryable: true
 #
 ##    默认配置,可以省略
-##  routes:
-##    item-service: /item-service/**
-##    user-service: /user-service/**
-##    order-service: /order-service/**
+  routes:
+    item-service: /item-service/**
+    user-service: /user-service/**
+    order-service: /order-service/**
 #    
 #ribbon:
 #  ConnectTimeout: 1000
@@ -33,8 +33,8 @@
 #          thread:
 #            timeoutInMilliseconds: 500
 #            
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: hystrix.stream
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

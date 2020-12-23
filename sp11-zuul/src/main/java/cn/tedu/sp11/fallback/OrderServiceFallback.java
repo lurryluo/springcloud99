@@ -1,9 +1,7 @@
 package cn.tedu.sp11.fallback;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
+import cn.tedu.web.util.JsonResult;
+import org.slf4j.Logger;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -11,14 +9,15 @@ import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 
-import cn.tedu.web.util.JsonResult;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Component
 public class OrderServiceFallback implements FallbackProvider {
-	@Override
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(OrderServiceFallback.class);
+
+    @Override
 	public String getRoute() {
 		return "order-service"; //"*"; //null;
 	}

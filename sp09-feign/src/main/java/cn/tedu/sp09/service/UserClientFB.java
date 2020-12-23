@@ -1,11 +1,11 @@
 package cn.tedu.sp09.service;
 
-import org.springframework.stereotype.Component;
 import cn.tedu.sp01.pojo.User;
 import cn.tedu.web.util.JsonResult;
+import org.springframework.stereotype.Component;
 
 @Component
-public class UserFeignServiceFB implements UserFeignService {
+public class UserClientFB implements UserClient {
 
 	@Override
 	public JsonResult<User> getUser(Integer userId) {

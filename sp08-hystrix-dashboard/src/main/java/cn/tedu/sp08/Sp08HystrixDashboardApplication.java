@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableHystrixDashboard
 @SpringBootApplication
 public class Sp08HystrixDashboardApplication {

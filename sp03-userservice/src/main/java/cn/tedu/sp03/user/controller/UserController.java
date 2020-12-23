@@ -1,21 +1,19 @@
 package cn.tedu.sp03.user.controller;
 
+import cn.tedu.sp01.pojo.User;
+import cn.tedu.sp01.service.UserService;
+import cn.tedu.web.util.JsonResult;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.tedu.sp01.pojo.User;
-import cn.tedu.sp01.service.UserService;
-import cn.tedu.web.util.JsonResult;
-
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @RestController
 public class UserController {
-	
-	@Autowired
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(UserController.class);
+    @Autowired
 	private UserService userService;
 	
 	@GetMapping("/{userId}")

@@ -1,18 +1,17 @@
 package cn.tedu.sp02.item.service;
 
+import cn.tedu.sp01.pojo.Item;
+import cn.tedu.sp01.service.ItemService;
+import org.slf4j.Logger;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
-import cn.tedu.sp01.pojo.Item;
-import cn.tedu.sp01.service.ItemService;
-
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Service
 public class ItemServiceImpl implements ItemService {
+
+	private static final Logger log = org.slf4j.LoggerFactory.getLogger(ItemServiceImpl.class);
 
 	@Override
 	public List<Item> getItems(String orderId) {

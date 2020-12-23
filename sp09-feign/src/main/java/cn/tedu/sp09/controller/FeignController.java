@@ -1,30 +1,25 @@
 package cn.tedu.sp09.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
 import cn.tedu.sp01.pojo.Item;
 import cn.tedu.sp01.pojo.Order;
 import cn.tedu.sp01.pojo.User;
-import cn.tedu.sp09.service.ItemFeignService;
-import cn.tedu.sp09.service.OrderFeignService;
-import cn.tedu.sp09.service.UserFeignService;
+import cn.tedu.sp09.service.ItemClient;
+import cn.tedu.sp09.service.OrderClient;
+import cn.tedu.sp09.service.UserClient;
 import cn.tedu.web.util.JsonResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class FeignController {
 	@Autowired
-	private ItemFeignService itemService;
+	private ItemClient itemService;
 	@Autowired
-	private UserFeignService userService;
+	private UserClient userService;
 	@Autowired
-	private OrderFeignService orderService;
+	private OrderClient orderService;
 	
 	@GetMapping("/item-service/{orderId}")
 	public JsonResult<List<Item>> getItems(@PathVariable String orderId) {
