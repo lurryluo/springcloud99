@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-turbine:2.2.0.RELEASE">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/Springframework/cloud/spring-cloud-starter-netflix-turbine/2.2.0.RELEASE/spring-cloud-starter-netflix-turbine-2.2.0.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
